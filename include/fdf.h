@@ -62,6 +62,7 @@ void	get_height(t_data *data, char *file);
 float	ft_abs(float x);
 float	ft_max(float a, float b);
 int		is_hex(char *str);
+int		hex_to_dec(char *hex);
 /*Frees*/
 void	free_split(char ***arr);
 void	free_map(int ***arr);
@@ -71,7 +72,6 @@ void	handle_translation(int key, t_data *data);
 void	handle_rotation(int key, t_data *data);
 void	handle_zoom(int key, t_data *data);
 void	handle_top_down(t_data *data);
-int		hex_to_dec(char *hex);
 /*Drawing*/
 void	draw(t_data *data);
 void	draw_t_d(t_data *data);
