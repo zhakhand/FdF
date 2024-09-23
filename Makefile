@@ -23,7 +23,7 @@ ${NAME}:	fdf
 
 fdf:	fdf.o
 		${MAKE} -s -C libft
-		${CC} ${CFLAGS} ${SRCS} -g ./libft/libft.a -o fdf -Lminilibx-linux -lmlx_Linux -lX11 -lXext -lm
+		${CC} ${CFLAGS} ${SRCS} -g ./libft/libft.a -o fdf -lmlx -lX11 -lXext -lm
 
 bonus:	all #Because bonus is implemented in the main program
 

@@ -1,12 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   fdf.h                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dzhakhan <dzhakhan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/23 10:23:06 by dzhakhan          #+#    #+#             */
+/*   Updated: 2024/09/23 10:23:07 by dzhakhan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FDF_H
 # define FDF_H
 
-# include "../minilibx-linux/mlx.h"
+//# include "../minilibx-linux/mlx.h"
 # include <X11/keysym.h>
 # include <X11/X.h>
 # include "../libft/libft.h"
 # include <fcntl.h>
-//# include <mlx.h>
+# include <mlx.h>
 # include <math.h>
 
 # define HEIGHT 1400

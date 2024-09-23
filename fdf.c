@@ -1,4 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   fdf.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dzhakhan <dzhakhan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/23 10:23:15 by dzhakhan          #+#    #+#             */
+/*   Updated: 2024/09/23 13:49:37 by dzhakhan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "./include/fdf.h"
+
+static int	check_file(char *filename)
+{
+	char	*temp;
+
+	temp = ft_strchr(filename, '.');
+	if (ft_strncmp(temp, ".fdf", ft_strlen(temp)) != 0)
+		return (0);
+	return (1);
+}
 
 static void	create_img(t_data *data)
 {
@@ -60,6 +82,8 @@ int	main(int ac, char **av)
 	if (!data)
 		end_prog(data, 2);
 	init_data(data);
+	if (!check_file(av[1]))
+		end_prog(data, 4);
 	read_file(av[1], data);
 	data->mlx_ptr = mlx_init();
 	if (!data->mlx_ptr)
